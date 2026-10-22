@@ -4,7 +4,10 @@ Panel de telemetría y alarmas para nodos [Meshtastic](https://meshtastic.org) q
 
 **Abrir la app:** https://dani-nros.github.io/vigia-mesh/
 
-> **Versión beta.** La app funciona, pero aún se está probando con distintos nodos y móviles. Si algo falla o echas algo en falta, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
+> **Versión ligera, congelada en la 1.20.** Esta app (Bluetooth y cable, sin instalar nada) sigue publicada y
+> funcionando, pero ya no tendrá funciones nuevas: solo arreglos de fallos graves. El desarrollo continúa en
+> **Vigía servidor** (la vigilancia 24/7 en un ordenador con Linux), que tendrá nombre y repositorio propios en su
+> versión 2.0. Si algo falla, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
 
 <p align="center"><img src="capturas/panel.png" alt="Tres pantallas de Vigía Mesh en modo demostración: el panel con una alarma de temperatura activa, la ficha de un nodo con los botones para pedir datos, su ubicación y la valla antirrobo, y el mapa de sensores con la temperatura de cada nodo sobre el mapa de la Ribera y l'Horta"></p>
 
