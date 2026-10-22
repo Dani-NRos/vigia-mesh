@@ -6,8 +6,8 @@ Panel de telemetría y alarmas para nodos [Meshtastic](https://meshtastic.org) q
 
 > **Versión ligera, congelada en la 1.20.** Esta app (Bluetooth y cable, sin instalar nada) sigue publicada y
 > funcionando, pero ya no tendrá funciones nuevas: solo arreglos de fallos graves. El desarrollo continúa en
-> **Vigía servidor** (la vigilancia 24/7 en un ordenador con Linux), que tendrá nombre y repositorio propios en su
-> versión 2.0. Si algo falla, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
+> **Vigía servidor** (la vigilancia 24/7 en un ordenador con Linux), que en su versión 2.0 pasa a llamarse
+> **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**. Si algo falla, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
 
 <p align="center"><img src="capturas/panel.png" alt="Tres pantallas de Vigía Mesh en modo demostración: el panel con una alarma de temperatura activa, la ficha de un nodo con los botones para pedir datos, su ubicación y la valla antirrobo, y el mapa de sensores con la temperatura de cada nodo sobre el mapa de la Ribera y l'Horta"></p>
 
@@ -83,6 +83,9 @@ histórico, y encenderlos y apagarlos desde la pantalla; y mandar a la malla, co
 de su nodo, los datos de una estación meteorológica que lleguen por MQTT. Se abre desde el navegador en la red de casa
 (o desde fuera, con Tailscale), con esta misma pantalla, y todos tus aparatos ven lo mismo. Instalación y detalles en
 [`codigo/servidor`](codigo/servidor/README.md).
+
+Aquí sigue la versión 1.20. Lo nuevo se hace en [Talaia Hub](https://github.com/Dani-NRos/talaia-hub), su nombre desde
+la 2.0.
 
 ## Código fuente
 
