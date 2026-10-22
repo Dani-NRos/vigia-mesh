@@ -1,5 +1,8 @@
 # Vigía servidor (camino de la 2.0)
 
+> **Esta rama (`mapa`) ya no se usa**: el desarrollo sigue en el repositorio `Dani-NRos/talaia-hub` (Talaia Hub), con
+> su historia y su propio CLAUDE.md. Lo de abajo es como estaba al pasar allí.
+
 **Vigía servidor**: vigilancia 24/7 en Linux (BMAX con Ubuntu, Raspberry Pi 4/5, Pi Zero 2 W) de nodos Meshtastic y
 dispositivos MQTT, con histórico en SQLite, Home Assistant por MQTT y acceso desde fuera con Tailscale. Esta rama
 (`mapa`) es la de la **versión 2.0** (plan abajo): tendrá nombre nuevo y repositorio propio.

@@ -1,11 +1,10 @@
-# Vigía servidor — rama de desarrollo de la 2.0
+# Vigía servidor → Talaia Hub
 
-Esta rama (`mapa`) es donde se desarrolla la **versión 2.0 de Vigía servidor**: la vigilancia 24/7 de nodos
-Meshtastic y dispositivos MQTT en un ordenador con Linux. Tendrá nombre nuevo y repositorio propio.
+Esta rama ya no se usa. El desarrollo de la 2.0 sigue en **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**,
+con toda la historia de esta rama.
 
-- **App ligera** (Bluetooth y cable, sin instalar nada): congelada en la 1.20, en la rama `main` y publicada en
-  https://dani-nros.github.io/vigia-mesh/ .
-- **Vigía servidor 1.20** (la versión estable): rama `version-1.20`; se instala con el instalador de `main`.
-- **Lo que se está haciendo aquí**: instalación, configuración y uso en [`codigo/servidor`](codigo/servidor/README.md).
+This branch is no longer used. Development of 2.0 continues in
+**[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**, with this branch's full history.
 
-Licencia: [GPL-3.0](LICENSE).
+- **App ligera** (Bluetooth y cable), congelada en la 1.20: rama `main`, publicada en https://dani-nros.github.io/vigia-mesh/ .
+- **Vigía servidor 1.20** (versión estable): rama `version-1.20`; se instala con el instalador de `main`.
