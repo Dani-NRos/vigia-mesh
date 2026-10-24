@@ -6,8 +6,8 @@ Panel de telemetría y alarmas para nodos [Meshtastic](https://meshtastic.org) q
 
 > **Versión ligera, congelada en la 1.20.** Esta app (Bluetooth y cable, sin instalar nada) sigue publicada y
 > funcionando, pero ya no tendrá funciones nuevas: solo arreglos de fallos graves. El desarrollo continúa en
-> **Vigía servidor** (la vigilancia 24/7 en un ordenador con Linux), que en su versión 2.0 pasa a llamarse
-> **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**. Si algo falla, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
+> **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)** (antes *Vigía servidor*), la vigilancia 24/7 en un
+> ordenador con Linux, ya en su versión 2.0. Si algo falla, [abre un aviso](https://github.com/Dani-NRos/vigia-mesh/issues).
 
 <p align="center"><img src="capturas/panel.png" alt="Tres pantallas de Vigía Mesh en modo demostración: el panel con una alarma de temperatura activa, la ficha de un nodo con los botones para pedir datos, su ubicación y la valla antirrobo, y el mapa de sensores con la temperatura de cada nodo sobre el mapa de la Ribera y l'Horta"></p>
 
@@ -68,24 +68,31 @@ Los fallos y las sugerencias se recogen en los [avisos de GitHub](https://github
 
 ## Límites conocidos
 
-- **Solo en primer plano.** Las alarmas saltan con la app abierta y en pantalla; con el móvil bloqueado, Chrome congela la página. Al volver, la app recoge lo que guardó el receptor y marca como «recibida al reconectar» lo que pasó mientras tanto. Para vigilar las 24 horas está [Vigía servidor](#vigía-servidor-en-pruebas).
+- **Solo en primer plano.** Las alarmas saltan con la app abierta y en pantalla; con el móvil bloqueado, Chrome congela la página. Al volver, la app recoge lo que guardó el receptor y marca como «recibida al reconectar» lo que pasó mientras tanto. Para vigilar las 24 horas está [Talaia Hub](#para-vigilar-las-24-horas-talaia-hub).
 - **No es tiempo real.** La telemetría sale cada 30 min por defecto, así que una alarma de umbral puede llegar con ese retraso. En 868 MHz el tiempo de emisión está limitado: no conviene bajar mucho el intervalo.
 - **Nodos dormidos.** Un nodo en modo de ahorro de energía no escucha mientras duerme, así que no contesta a *Pedir datos ahora*.
 
-## Vigía servidor (en pruebas)
+## Para vigilar las 24 horas: Talaia Hub
 
 La misma vigilancia funcionando las 24 horas en un ordenador con Linux (un mini PC o una Raspberry Pi) con un nodo
-enchufado por USB o accesible por la red: alarmas aunque no haya ningún móvil mirando, histórico en el propio
-servidor, avisos por la malla y conexión con Home Assistant por MQTT (los nodos vigilados aparecen como dispositivos,
-con sus lecturas, sus alarmas y «Enterado» desde Home Assistant). Sus paneles pueden mostrar también dispositivos
-que publican por MQTT (Shelly, Tasmota, Zigbee…), con sus valores o estados (encendido, abierta…), alarmas e
-histórico, y encenderlos y apagarlos desde la pantalla; y mandar a la malla, como telemetría
-de su nodo, los datos de una estación meteorológica que lleguen por MQTT. Se abre desde el navegador en la red de casa
-(o desde fuera, con Tailscale), con esta misma pantalla, y todos tus aparatos ven lo mismo. Instalación y detalles en
-[`codigo/servidor`](codigo/servidor/README.md).
+enchufado por USB o accesible por la red: alarmas aunque no haya ningún móvil mirando, un año de histórico, avisos por
+la malla, Home Assistant por MQTT, paneles para dispositivos MQTT (Shelly, Tasmota, Zigbee…) que se pueden encender y
+apagar desde la pantalla, usuarios con contraseña y acceso desde fuera de casa con Tailscale. Se abre desde el
+navegador, en español o en inglés, y todos tus aparatos ven lo mismo.
 
-Aquí sigue la versión 1.20. Lo nuevo se hace en [Talaia Hub](https://github.com/Dani-NRos/talaia-hub), su nombre desde
-la 2.0.
+Hasta la 1.20 se llamaba *Vigía servidor* y estaba aquí; desde la 2.0 es **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**,
+con su propio repositorio. Para instalarlo (Ubuntu, Debian o Raspberry Pi OS):
+
+```
+wget -qO- https://raw.githubusercontent.com/Dani-NRos/talaia-hub/main/codigo/servidor/instalar.sh | sudo bash
+```
+
+También hay imagen de Docker. Todo, en su [manual de uso](https://github.com/Dani-NRos/talaia-hub/blob/main/docs/guide.es.md).
+**Si ya tienes Vigía servidor**, esa misma orden lo pasa a Talaia con tus datos, tu configuración y los usuarios de tu
+broker; en Home Assistant no cambia nada.
+
+La carpeta [`codigo/servidor`](codigo/servidor/README.md) de este repositorio guarda Vigía servidor tal como quedó en la
+1.20, sin cambios.
 
 ## Código fuente
 
@@ -93,7 +100,7 @@ El código está en la carpeta [`codigo/`](codigo/), en tres partes:
 
 - [`codigo/nucleo/`](codigo/nucleo/): la lógica sin pantalla (alarmas, peticiones a nodos, rutas, avisos por la malla, conexión con el nodo). La comparten la app y el servidor.
 - [`codigo/app/`](codigo/app/): la app web (pantalla, Bluetooth, cable USB, mapa y demo).
-- [`codigo/servidor/`](codigo/servidor/): Vigía servidor (Node.js, SQLite, MQTT, instalador para Linux).
+- [`codigo/servidor/`](codigo/servidor/): Vigía servidor tal como quedó en la 1.20 (Node.js, SQLite, MQTT, instalador para Linux); sigue en [Talaia Hub](https://github.com/Dani-NRos/talaia-hub).
 
 Para compilar y probar:
 

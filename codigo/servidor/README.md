@@ -3,9 +3,10 @@
 Vigía Mesh funcionando 24/7 en Linux: las mismas alarmas que la app (umbral, cambio rápido, valla antirrobo, sin
 señal) y el histórico de lecturas en SQLite, aunque no haya ningún móvil ni ordenador mirando.
 
-> **En pruebas.** Vigila, guarda el histórico y lo cuenta en el diario del sistema; tiene la misma pantalla que la app
-> (ábrela desde el navegador en la red de casa), manda los avisos por la malla si los activas y publica en Home
-> Assistant por MQTT. El acceso desde fuera con https (Tailscale) llega en el siguiente paso.
+> **Esta es la versión 1.20, que ya no cambia.** Vigía servidor sigue como **[Talaia Hub](https://github.com/Dani-NRos/talaia-hub)**
+> (versión 2.0), con su propio instalador y su [manual](https://github.com/Dani-NRos/talaia-hub/blob/main/docs/guide.es.md).
+> Si ya tienes Vigía servidor, el instalador de Talaia lo pasa a Talaia con tus datos y tu configuración:
+> `wget -qO- https://raw.githubusercontent.com/Dani-NRos/talaia-hub/main/codigo/servidor/instalar.sh | sudo bash`
 
 ## Qué hace falta
 
